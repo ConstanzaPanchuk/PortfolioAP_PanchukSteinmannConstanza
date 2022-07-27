@@ -1,30 +1,22 @@
 <div class="row">
     <h2>Experiencia laboral</h2>
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-dark" routerLink="/nuevaexp" *ngIf="isLogged">
+            Nueva experiencia
+        </button>
+    </div>
+    
     <div class="col-lg-1"></div>
     <div class="col-lg-11">
-        <ul>
-            <li>
-                <h3>Trabajo 1</h3> - <h4>(years)</h4>
-            </li>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa voluptate cupiditate incidunt enim porro! Architecto quas nesciunt quod necessitatibus libero. Neque nam porro consequatur. Animi dolorum cupiditate nisi aut quo?
-            </p>
-        </ul>
-        <ul>
-            <li>
-                <h3>Trabajo 2</h3> - <h4>(years)</h4>
-            </li>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa voluptate cupiditate incidunt enim porro! Architecto quas nesciunt quod necessitatibus libero. Neque nam porro consequatur. Animi dolorum cupiditate nisi aut quo?
-            </p>
-        </ul>
-        <ul>
-            <li>
-                <h3>Trabajo 3</h3> - <h4>(years)</h4>
-            </li>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa voluptate cupiditate incidunt enim porro! Architecto quas nesciunt quod necessitatibus libero. Neque nam porro consequatur. Animi dolorum cupiditate nisi aut quo?
-            </p>
-        </ul>
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let Experiencia of expe">
+                    <td><h4>{{Experiencia.nombreE}}</h4></td>
+                    <td>{{Experiencia.descripcionE}}</td>
+                    <td *ngIf="isLogged"><button class="btn btn-light" routerLink="/editexp/{{Experiencia.id}}"><i class="bi bi-pen-fill"></i>Editar</button></td>
+                    <td *ngIf="isLogged"><button class="btn btn-danger" (click)="delete(Experiencia.id)"><i class="bi bi-trash3-fill"></i>Borrar</button></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
