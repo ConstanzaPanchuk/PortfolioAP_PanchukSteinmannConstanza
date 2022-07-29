@@ -1,15 +1,15 @@
 <div class="row"> 
     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-        <img src="../../../assets/fotoPerfil.jpeg" class="img-fluid" id="fotoPerfil">
+        <img src="{{persona.img}}" class="img-fluid" id="fotoPerfil">
     </div>
     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
         <p id="nombre">{{persona.nombre}} {{persona.apellido}}</p>
-        <p>Full Stack Developer Jr</p>
+        <p>{{persona.titulo}}</p>
     </div>
     <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
         <span>
-            <p>Acerca de mí</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A ab, magni exercitationem quos reprehenderit fugit voluptatum, necessitatibus aliquid excepturi magnam dolores aliquam temporibus maxime illum maiores architecto et odit quasi.</p>
+            <h3>Acerca de mí</h3>
+            <p id="acercaDe">{{persona.acercaDe}}</p>
         </span>
     </div>
 </div>

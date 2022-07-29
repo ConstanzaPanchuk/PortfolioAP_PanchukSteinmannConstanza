@@ -25,6 +25,12 @@ public class Persona {
     @Size(min = 1, max = 50, message = "no cumple con la longitud")
     private String img;
 
+    @Size(min = 1, max = 50, message = "no cumple con la longitud")
+    private String titulo;
+
+    @Size(min = 1, max = 200, message = "no cumple con la longitud")
+    private String acercaDe;
+
     public Long getId() {
         return id;
     }
@@ -57,5 +63,20 @@ public class Persona {
         this.img = img;
     }
 
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getAcercaDe() {
+        return acercaDe;
+    }
+
+    public void setAcercaDe(String acercaDe) {
+        this.acercaDe = acercaDe;
+    }
 
 }
