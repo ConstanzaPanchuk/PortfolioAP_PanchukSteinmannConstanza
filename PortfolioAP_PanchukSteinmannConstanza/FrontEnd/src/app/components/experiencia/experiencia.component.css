@@ -3,9 +3,42 @@
 }
 
 div{
-    background-color:#82c1eb;
+    /*background-color:#82c1eb;*/
 }
 
-h3, h4{
-    display: inline;
+#fotoExp{
+    box-shadow: 10px 10px 30px #3d3d3d;
+}
+
+h2{
+    font-family: 'Tajawal', sans-serif;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+h5{
+    font-family: 'Tajawal', sans-serif;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+p{
+    font-family: 'Tajawal', sans-serif;
+    font-size: 1.2em;
+}
+
+#tarjeta {
+    border:solid #309AE1;
+    margin-top: 10px;
+    background-color: rgba(245, 223, 234, 0.5);
+}
+
+#botonEditar{
+    position:absolute;
+    left: 84%;
+}
+
+#botonBorrar{
+    position: absolute;
+    left: 92%;
 }
