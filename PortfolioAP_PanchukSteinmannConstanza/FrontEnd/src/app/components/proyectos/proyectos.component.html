@@ -5,7 +5,7 @@
           Agregar Proyecto
       </button>
   </div>
-      <div class="card mb-3" *ngFor="let Proyectos of proyectos">
+      <div class="card mb-3" *ngFor="let Proyectos of proyectos" id="tarjeta">
           <div class="row g-0">
           <div class="col-md-4">
               <img src="{{ Proyectos.imgP }}" class="img-fluid rounded-start" style="max-width: 250px; max-height: 250px" id="fotoPro">
@@ -19,10 +19,10 @@
           </div>
               <div class="col-md-1">
                   <div *ngIf="isLogged">
-                      <button class="btn btn-light" routerLink="/editpro/{{ Proyectos.id }}"><i class="bi bi-pen-fill"></i>Editar</button>
+                      <button class="btn btn-light" routerLink="/editpro/{{ Proyectos.id }}" id="botonEditar"><i class="bi bi-pen-fill"></i>Editar</button>
                   </div>
                   <div *ngIf="isLogged">
-                      <button class="btn btn-danger" (click)="delete(Proyectos.id)"><i class="bi bi-trash3-fill"></i>Borrar</button>
+                      <button class="btn btn-danger" (click)="delete(Proyectos.id)" id="botonBorrar"><i class="bi bi-trash3-fill"></i>Borrar</button>
                   </div>
               </div>
           </div>
